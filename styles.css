@@ -295,6 +295,43 @@ footer {
     border: 1px solid #f5c6cb;
 }
 
+/* Download Section */
+.download-section {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.download-section h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.download-section p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.download-btn {
+    background: #fff;
+    color: #667eea;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: #f8f9fa;
+}
+
 /* Hide sections initially */
 .hidden {
     display: none !important;

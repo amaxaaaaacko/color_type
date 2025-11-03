@@ -1,34 +1,73 @@
-# Color Type AI - Image Analysis Landing Page
+# Color Type AI - Secure Image Analysis Tool
 
-An AI-powered landing page that analyzes uploaded images using GPT-4 Vision and collects user feedback through integrated forms.
+An AI-powered application that analyzes uploaded images using GPT-4 Vision with a secure server-side architecture that protects your API keys.
+
+## 🔒 Security First
+
+This application now uses a **secure server-side architecture** to protect your API keys and credentials from being exposed to users.
 
 ## Features
 
-- 🖼️ **Image Upload**: Drag & drop or click to upload images (JPG, PNG, WebP up to 10MB)
+- 🖼️ **Secure Image Upload**: Drag & drop or click to upload images (JPG, PNG, WebP up to 10MB)
 - 🤖 **AI Analysis**: GPT-4 Vision API analyzes images for color composition, mood, and visual elements
 - ⭐ **Review System**: Star ratings and text feedback collection
 - 📊 **Data Collection**: Reviews and app interest stored in Google Sheets
 - 📈 **Analytics**: Microsoft Clarity for site analytics
 - 📱 **Facebook Pixel**: Conversion tracking and audience building
 - 📱 **Mobile App Interest**: Form to gauge interest in mobile version
+- 🛡️ **API Key Protection**: All sensitive credentials stored server-side only
 
-## Setup Instructions
+## Quick Start
 
-### 1. API Keys Configuration
+### 1. Install Dependencies
 
-Replace the placeholder values in `script.js` with your actual credentials:
-
-```javascript
-const CONFIG = {
-    OPENAI_API_KEY: 'your-openai-api-key-here',
-    GOOGLE_SHEETS_URL: 'your-google-sheets-webhook-url',
-    FB_PIXEL_ID: 'your-facebook-pixel-id',
-    CLARITY_ID: 'your-clarity-project-id',
-    ANALYSIS_PROMPT: 'Your custom analysis prompt...'
-};
+```bash
+npm install
 ```
 
-### 2. OpenAI API Setup
+### 2. Configure Environment
+
+Copy the example environment file and add your API keys:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your actual credentials:
+
+```env
+OPENAI_API_KEY=sk-your-actual-openai-api-key-here
+GOOGLE_SHEETS_URL=https://your-webhook-url.com
+FB_PIXEL_ID=your-facebook-pixel-id
+CLARITY_ID=your-clarity-project-id
+PORT=3000
+```
+
+### 3. Start the Server
+
+```bash
+# Production
+npm start
+
+# Development (with auto-restart)
+npm run dev
+```
+
+### 4. Open the Application
+
+Navigate to `http://localhost:3000` in your browser.
+
+## 🛡️ Security Features
+
+- ✅ **API keys protected server-side**: No sensitive data exposed to client
+- ✅ **Environment variables**: Secured with `.gitignore`
+- ✅ **Server-side processing**: All API calls happen on your server
+- ✅ **CORS protection**: Configured for security
+- ✅ **Demo mode**: Works without API keys for testing
+
+## API Configuration
+
+### OpenAI API Setup
 
 1. Sign up at [OpenAI](https://platform.openai.com/)
 2. Create an API key
